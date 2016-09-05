@@ -1,0 +1,728 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g', 'ios-sim' ]
+2 info using npm@3.6.0
+3 info using node@v0.12.7
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData ios-sim
+8 silly fetchNamedPackageData ios-sim
+9 silly mapToRegistry name ios-sim
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry uri https://registry.npmjs.org/ios-sim
+13 verbose request uri https://registry.npmjs.org/ios-sim
+14 verbose request no auth needed
+15 info attempt registry request try #1 at 11:21:36 AM
+16 verbose request id bbf5cf87f284cdfe
+17 verbose etag "7ZTP8VD0J74VLPPFIQ85YXZ21"
+18 http request GET https://registry.npmjs.org/ios-sim
+19 http 304 https://registry.npmjs.org/ios-sim
+20 verbose headers { date: 'Fri, 29 Jan 2016 03:21:35 GMT',
+20 verbose headers   via: '1.1 varnish',
+20 verbose headers   'cache-control': 'max-age=300',
+20 verbose headers   etag: '"7ZTP8VD0J74VLPPFIQ85YXZ21"',
+20 verbose headers   age: '0',
+20 verbose headers   connection: 'keep-alive',
+20 verbose headers   'x-served-by': 'cache-hkg6821-HKG',
+20 verbose headers   'x-cache': 'MISS',
+20 verbose headers   'x-cache-hits': '0',
+20 verbose headers   'x-timer': 'S1454037695.955327,VS0,VE743',
+20 verbose headers   vary: 'Accept' }
+21 silly get cb [ 304,
+21 silly get   { date: 'Fri, 29 Jan 2016 03:21:35 GMT',
+21 silly get     via: '1.1 varnish',
+21 silly get     'cache-control': 'max-age=300',
+21 silly get     etag: '"7ZTP8VD0J74VLPPFIQ85YXZ21"',
+21 silly get     age: '0',
+21 silly get     connection: 'keep-alive',
+21 silly get     'x-served-by': 'cache-hkg6821-HKG',
+21 silly get     'x-cache': 'MISS',
+21 silly get     'x-cache-hits': '0',
+21 silly get     'x-timer': 'S1454037695.955327,VS0,VE743',
+21 silly get     vary: 'Accept' } ]
+22 verbose etag https://registry.npmjs.org/ios-sim from cache
+23 verbose get saving ios-sim to /Users/juwaini/.npm/registry.npmjs.org/ios-sim/.cache.json
+24 verbose correctMkdir /Users/juwaini/.npm correctMkdir not in flight; initializing
+25 silly install normalizeTree
+26 silly loadCurrentTree Finishing
+27 silly loadIdealTree Starting
+28 silly install loadIdealTree
+29 silly cloneCurrentTree Starting
+30 silly install cloneCurrentTreeToIdealTree
+31 silly cloneCurrentTree Finishing
+32 silly loadShrinkwrap Starting
+33 silly install loadShrinkwrap
+34 silly loadShrinkwrap Finishing
+35 silly loadAllDepsIntoIdealTree Starting
+36 silly install loadAllDepsIntoIdealTree
+37 silly resolveWithNewModule ios-sim@5.0.6 checking installable status
+38 silly cache add args [ 'ios-sim', null ]
+39 verbose cache add spec ios-sim
+40 silly cache add parsed spec { raw: 'ios-sim',
+40 silly cache add   scope: null,
+40 silly cache add   name: 'ios-sim',
+40 silly cache add   rawSpec: '',
+40 silly cache add   spec: 'latest',
+40 silly cache add   type: 'tag' }
+41 silly addNamed ios-sim@latest
+42 verbose addNamed "latest" is being treated as a dist-tag for ios-sim
+43 info addNameTag [ 'ios-sim', 'latest' ]
+44 silly mapToRegistry name ios-sim
+45 silly mapToRegistry using default registry
+46 silly mapToRegistry registry https://registry.npmjs.org/
+47 silly mapToRegistry uri https://registry.npmjs.org/ios-sim
+48 verbose addNameTag registry:https://registry.npmjs.org/ios-sim not in flight; fetching
+49 verbose get https://registry.npmjs.org/ios-sim not expired, no request
+50 silly addNameTag next cb for ios-sim with tag latest
+51 silly addNamed ios-sim@5.0.6
+52 verbose addNamed "5.0.6" is a plain semver version for ios-sim
+53 silly cache afterAdd ios-sim@5.0.6
+54 verbose afterAdd /Users/juwaini/.npm/ios-sim/5.0.6/package/package.json not in flight; writing
+55 verbose correctMkdir /Users/juwaini/.npm correctMkdir not in flight; initializing
+56 verbose afterAdd /Users/juwaini/.npm/ios-sim/5.0.6/package/package.json written
+57 silly fetchNamedPackageData simctl
+58 silly mapToRegistry name simctl
+59 silly mapToRegistry using default registry
+60 silly mapToRegistry registry https://registry.npmjs.org/
+61 silly mapToRegistry uri https://registry.npmjs.org/simctl
+62 silly fetchNamedPackageData nopt
+63 silly mapToRegistry name nopt
+64 silly mapToRegistry using default registry
+65 silly mapToRegistry registry https://registry.npmjs.org/
+66 silly mapToRegistry uri https://registry.npmjs.org/nopt
+67 silly fetchNamedPackageData bplist-parser
+68 silly mapToRegistry name bplist-parser
+69 silly mapToRegistry using default registry
+70 silly mapToRegistry registry https://registry.npmjs.org/
+71 silly mapToRegistry uri https://registry.npmjs.org/bplist-parser
+72 verbose request uri https://registry.npmjs.org/simctl
+73 verbose request no auth needed
+74 info attempt registry request try #1 at 11:21:38 AM
+75 http request GET https://registry.npmjs.org/simctl
+76 verbose request uri https://registry.npmjs.org/bplist-parser
+77 verbose request no auth needed
+78 info attempt registry request try #1 at 11:21:38 AM
+79 verbose etag "93F5RZ172BWRNNELFT42PJC5P"
+80 http request GET https://registry.npmjs.org/bplist-parser
+81 verbose request uri https://registry.npmjs.org/nopt
+82 verbose request no auth needed
+83 info attempt registry request try #1 at 11:21:38 AM
+84 verbose etag "1IA1PCOREFA1D278SXAMNMGJT"
+85 http request GET https://registry.npmjs.org/nopt
+86 http 200 https://registry.npmjs.org/simctl
+87 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+87 verbose headers   etag: '"28AT4CVXNEWDAXRUT65W6POH3"',
+87 verbose headers   'content-type': 'application/json',
+87 verbose headers   'cache-control': 'max-age=300',
+87 verbose headers   'content-length': '7168',
+87 verbose headers   'accept-ranges': 'bytes',
+87 verbose headers   date: 'Fri, 29 Jan 2016 03:21:37 GMT',
+87 verbose headers   via: '1.1 varnish',
+87 verbose headers   age: '0',
+87 verbose headers   connection: 'keep-alive',
+87 verbose headers   'x-served-by': 'cache-hkg6824-HKG',
+87 verbose headers   'x-cache': 'MISS',
+87 verbose headers   'x-cache-hits': '0',
+87 verbose headers   'x-timer': 'S1454037696.994796,VS0,VE207',
+87 verbose headers   vary: 'Accept' }
+88 silly get cb [ 200,
+88 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+88 silly get     etag: '"28AT4CVXNEWDAXRUT65W6POH3"',
+88 silly get     'content-type': 'application/json',
+88 silly get     'cache-control': 'max-age=300',
+88 silly get     'content-length': '7168',
+88 silly get     'accept-ranges': 'bytes',
+88 silly get     date: 'Fri, 29 Jan 2016 03:21:37 GMT',
+88 silly get     via: '1.1 varnish',
+88 silly get     age: '0',
+88 silly get     connection: 'keep-alive',
+88 silly get     'x-served-by': 'cache-hkg6824-HKG',
+88 silly get     'x-cache': 'MISS',
+88 silly get     'x-cache-hits': '0',
+88 silly get     'x-timer': 'S1454037696.994796,VS0,VE207',
+88 silly get     vary: 'Accept' } ]
+89 verbose get saving simctl to /Users/juwaini/.npm/registry.npmjs.org/simctl/.cache.json
+90 verbose correctMkdir /Users/juwaini/.npm correctMkdir not in flight; initializing
+91 http 200 https://registry.npmjs.org/bplist-parser
+92 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+92 verbose headers   etag: '"AGWSPFCRLNGDFFNZ3XI793Q8Q"',
+92 verbose headers   'content-type': 'application/json',
+92 verbose headers   'cache-control': 'max-age=300',
+92 verbose headers   'content-length': '9398',
+92 verbose headers   'accept-ranges': 'bytes',
+92 verbose headers   date: 'Fri, 29 Jan 2016 03:21:37 GMT',
+92 verbose headers   via: '1.1 varnish',
+92 verbose headers   age: '0',
+92 verbose headers   connection: 'keep-alive',
+92 verbose headers   'x-served-by': 'cache-hkg6820-HKG',
+92 verbose headers   'x-cache': 'HIT',
+92 verbose headers   'x-cache-hits': '1',
+92 verbose headers   'x-timer': 'S1454037696.992432,VS0,VE211',
+92 verbose headers   vary: 'Accept' }
+93 silly get cb [ 200,
+93 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+93 silly get     etag: '"AGWSPFCRLNGDFFNZ3XI793Q8Q"',
+93 silly get     'content-type': 'application/json',
+93 silly get     'cache-control': 'max-age=300',
+93 silly get     'content-length': '9398',
+93 silly get     'accept-ranges': 'bytes',
+93 silly get     date: 'Fri, 29 Jan 2016 03:21:37 GMT',
+93 silly get     via: '1.1 varnish',
+93 silly get     age: '0',
+93 silly get     connection: 'keep-alive',
+93 silly get     'x-served-by': 'cache-hkg6820-HKG',
+93 silly get     'x-cache': 'HIT',
+93 silly get     'x-cache-hits': '1',
+93 silly get     'x-timer': 'S1454037696.992432,VS0,VE211',
+93 silly get     vary: 'Accept' } ]
+94 verbose get saving bplist-parser to /Users/juwaini/.npm/registry.npmjs.org/bplist-parser/.cache.json
+95 verbose correctMkdir /Users/juwaini/.npm correctMkdir not in flight; initializing
+96 silly resolveWithNewModule bplist-parser@0.0.6 checking installable status
+97 silly cache add args [ 'bplist-parser@^0.0.6', null ]
+98 verbose cache add spec bplist-parser@^0.0.6
+99 silly cache add parsed spec { raw: 'bplist-parser@^0.0.6',
+99 silly cache add   scope: null,
+99 silly cache add   name: 'bplist-parser',
+99 silly cache add   rawSpec: '^0.0.6',
+99 silly cache add   spec: '>=0.0.6 <0.0.7',
+99 silly cache add   type: 'range' }
+100 silly addNamed bplist-parser@>=0.0.6 <0.0.7
+101 verbose addNamed ">=0.0.6 <0.0.7" is a valid semver range for bplist-parser
+102 silly addNameRange { name: 'bplist-parser',
+102 silly addNameRange   range: '>=0.0.6 <0.0.7',
+102 silly addNameRange   hasData: false }
+103 silly mapToRegistry name bplist-parser
+104 silly mapToRegistry using default registry
+105 silly mapToRegistry registry https://registry.npmjs.org/
+106 silly mapToRegistry uri https://registry.npmjs.org/bplist-parser
+107 verbose addNameRange registry:https://registry.npmjs.org/bplist-parser not in flight; fetching
+108 silly resolveWithNewModule simctl@0.0.8 checking installable status
+109 silly cache add args [ 'simctl@^0.0.8', null ]
+110 verbose cache add spec simctl@^0.0.8
+111 silly cache add parsed spec { raw: 'simctl@^0.0.8',
+111 silly cache add   scope: null,
+111 silly cache add   name: 'simctl',
+111 silly cache add   rawSpec: '^0.0.8',
+111 silly cache add   spec: '>=0.0.8 <0.0.9',
+111 silly cache add   type: 'range' }
+112 silly addNamed simctl@>=0.0.8 <0.0.9
+113 verbose addNamed ">=0.0.8 <0.0.9" is a valid semver range for simctl
+114 silly addNameRange { name: 'simctl', range: '>=0.0.8 <0.0.9', hasData: false }
+115 silly mapToRegistry name simctl
+116 silly mapToRegistry using default registry
+117 silly mapToRegistry registry https://registry.npmjs.org/
+118 silly mapToRegistry uri https://registry.npmjs.org/simctl
+119 verbose addNameRange registry:https://registry.npmjs.org/simctl not in flight; fetching
+120 verbose get https://registry.npmjs.org/bplist-parser not expired, no request
+121 silly addNameRange number 2 { name: 'bplist-parser', range: '>=0.0.6 <0.0.7', hasData: true }
+122 silly addNameRange versions [ 'bplist-parser',
+122 silly addNameRange   [ '0.0.1',
+122 silly addNameRange     '0.0.2',
+122 silly addNameRange     '0.0.3',
+122 silly addNameRange     '0.0.4',
+122 silly addNameRange     '0.0.5',
+122 silly addNameRange     '0.0.6',
+122 silly addNameRange     '0.1.0',
+122 silly addNameRange     '0.1.1' ] ]
+123 silly addNamed bplist-parser@0.0.6
+124 verbose addNamed "0.0.6" is a plain semver version for bplist-parser
+125 verbose get https://registry.npmjs.org/simctl not expired, no request
+126 silly addNameRange number 2 { name: 'simctl', range: '>=0.0.8 <0.0.9', hasData: true }
+127 silly addNameRange versions [ 'simctl',
+127 silly addNameRange   [ '0.0.1', '0.0.2', '0.0.3', '0.0.5', '0.0.6', '0.0.7', '0.0.8' ] ]
+128 silly addNamed simctl@0.0.8
+129 verbose addNamed "0.0.8" is a plain semver version for simctl
+130 silly mapToRegistry name simctl
+131 silly mapToRegistry using default registry
+132 silly mapToRegistry registry https://registry.npmjs.org/
+133 silly mapToRegistry uri https://registry.npmjs.org/simctl
+134 verbose addRemoteTarball https://registry.npmjs.org/simctl/-/simctl-0.0.8.tgz not in flight; adding
+135 verbose addRemoteTarball [ 'https://registry.npmjs.org/simctl/-/simctl-0.0.8.tgz',
+135 verbose addRemoteTarball   '94322d0270e45e08d732c232c913f8a8133af641' ]
+136 silly cache afterAdd bplist-parser@0.0.6
+137 verbose afterAdd /Users/juwaini/.npm/bplist-parser/0.0.6/package/package.json not in flight; writing
+138 verbose correctMkdir /Users/juwaini/.npm correctMkdir not in flight; initializing
+139 verbose afterAdd /Users/juwaini/.npm/bplist-parser/0.0.6/package/package.json written
+140 info retry fetch attempt 1 at 11:21:38 AM
+141 info attempt registry request try #1 at 11:21:38 AM
+142 http fetch GET https://registry.npmjs.org/simctl/-/simctl-0.0.8.tgz
+143 http fetch 200 https://registry.npmjs.org/simctl/-/simctl-0.0.8.tgz
+144 silly fetchAndShaCheck shasum 94322d0270e45e08d732c232c913f8a8133af641
+145 verbose addTmpTarball /var/folders/wp/q_4wp9_53dv4m7qd4vlknp8r0000gn/T/npm-6633-56ab22eb/registry.npmjs.org/simctl/-/simctl-0.0.8.tgz not in flight; adding
+146 verbose addTmpTarball already have metadata; skipping unpack for simctl@0.0.8
+147 verbose correctMkdir /Users/juwaini/.npm correctMkdir not in flight; initializing
+148 silly cache afterAdd simctl@0.0.8
+149 verbose afterAdd /Users/juwaini/.npm/simctl/0.0.8/package/package.json not in flight; writing
+150 verbose correctMkdir /Users/juwaini/.npm correctMkdir not in flight; initializing
+151 verbose afterAdd /Users/juwaini/.npm/simctl/0.0.8/package/package.json written
+152 http 200 https://registry.npmjs.org/nopt
+153 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+153 verbose headers   etag: '"EOZTX9OIF152XUTZOK5DSHSTH"',
+153 verbose headers   'content-type': 'application/json',
+153 verbose headers   'cache-control': 'max-age=300',
+153 verbose headers   'content-length': '31240',
+153 verbose headers   'accept-ranges': 'bytes',
+153 verbose headers   date: 'Fri, 29 Jan 2016 03:21:37 GMT',
+153 verbose headers   via: '1.1 varnish',
+153 verbose headers   age: '238',
+153 verbose headers   connection: 'keep-alive',
+153 verbose headers   'x-served-by': 'cache-hkg6824-HKG',
+153 verbose headers   'x-cache': 'HIT',
+153 verbose headers   'x-cache-hits': '11',
+153 verbose headers   'x-timer': 'S1454037697.708215,VS0,VE0',
+153 verbose headers   vary: 'Accept' }
+154 silly get cb [ 200,
+154 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+154 silly get     etag: '"EOZTX9OIF152XUTZOK5DSHSTH"',
+154 silly get     'content-type': 'application/json',
+154 silly get     'cache-control': 'max-age=300',
+154 silly get     'content-length': '31240',
+154 silly get     'accept-ranges': 'bytes',
+154 silly get     date: 'Fri, 29 Jan 2016 03:21:37 GMT',
+154 silly get     via: '1.1 varnish',
+154 silly get     age: '238',
+154 silly get     connection: 'keep-alive',
+154 silly get     'x-served-by': 'cache-hkg6824-HKG',
+154 silly get     'x-cache': 'HIT',
+154 silly get     'x-cache-hits': '11',
+154 silly get     'x-timer': 'S1454037697.708215,VS0,VE0',
+154 silly get     vary: 'Accept' } ]
+155 verbose get saving nopt to /Users/juwaini/.npm/registry.npmjs.org/nopt/.cache.json
+156 verbose correctMkdir /Users/juwaini/.npm correctMkdir not in flight; initializing
+157 silly resolveWithNewModule nopt@1.0.9 checking installable status
+158 silly cache add args [ 'nopt@1.0.9', null ]
+159 verbose cache add spec nopt@1.0.9
+160 silly cache add parsed spec { raw: 'nopt@1.0.9',
+160 silly cache add   scope: null,
+160 silly cache add   name: 'nopt',
+160 silly cache add   rawSpec: '1.0.9',
+160 silly cache add   spec: '1.0.9',
+160 silly cache add   type: 'version' }
+161 silly addNamed nopt@1.0.9
+162 verbose addNamed "1.0.9" is a plain semver version for nopt
+163 silly mapToRegistry name nopt
+164 silly mapToRegistry using default registry
+165 silly mapToRegistry registry https://registry.npmjs.org/
+166 silly mapToRegistry uri https://registry.npmjs.org/nopt
+167 verbose addNameVersion registry:https://registry.npmjs.org/nopt not in flight; fetching
+168 verbose get https://registry.npmjs.org/nopt not expired, no request
+169 silly mapToRegistry name nopt
+170 silly mapToRegistry using default registry
+171 silly mapToRegistry registry https://registry.npmjs.org/
+172 silly mapToRegistry uri https://registry.npmjs.org/nopt
+173 verbose addRemoteTarball https://registry.npmjs.org/nopt/-/nopt-1.0.9.tgz not in flight; adding
+174 verbose addRemoteTarball [ 'https://registry.npmjs.org/nopt/-/nopt-1.0.9.tgz',
+174 verbose addRemoteTarball   '3bc0d7cba7bfb0d5a676dbed7c0ebe48a4fd454e' ]
+175 info retry fetch attempt 1 at 11:21:39 AM
+176 info attempt registry request try #1 at 11:21:39 AM
+177 http fetch GET https://registry.npmjs.org/nopt/-/nopt-1.0.9.tgz
+178 http fetch 200 https://registry.npmjs.org/nopt/-/nopt-1.0.9.tgz
+179 silly fetchAndShaCheck shasum 3bc0d7cba7bfb0d5a676dbed7c0ebe48a4fd454e
+180 verbose addTmpTarball /var/folders/wp/q_4wp9_53dv4m7qd4vlknp8r0000gn/T/npm-6633-56ab22eb/registry.npmjs.org/nopt/-/nopt-1.0.9.tgz not in flight; adding
+181 verbose addTmpTarball already have metadata; skipping unpack for nopt@1.0.9
+182 verbose correctMkdir /Users/juwaini/.npm correctMkdir not in flight; initializing
+183 silly cache afterAdd nopt@1.0.9
+184 verbose afterAdd /Users/juwaini/.npm/nopt/1.0.9/package/package.json not in flight; writing
+185 verbose correctMkdir /Users/juwaini/.npm correctMkdir not in flight; initializing
+186 verbose afterAdd /Users/juwaini/.npm/nopt/1.0.9/package/package.json written
+187 silly fetchNamedPackageData abbrev
+188 silly mapToRegistry name abbrev
+189 silly mapToRegistry using default registry
+190 silly mapToRegistry registry https://registry.npmjs.org/
+191 silly mapToRegistry uri https://registry.npmjs.org/abbrev
+192 verbose request uri https://registry.npmjs.org/abbrev
+193 verbose request no auth needed
+194 info attempt registry request try #1 at 11:21:39 AM
+195 verbose etag "F3Q3N6H2H59MS1PC9J6CMODYT"
+196 http request GET https://registry.npmjs.org/abbrev
+197 http 200 https://registry.npmjs.org/abbrev
+198 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+198 verbose headers   etag: '"5COR5F08LNF679JR9VE4E6VZW"',
+198 verbose headers   'content-type': 'application/json',
+198 verbose headers   'cache-control': 'max-age=300',
+198 verbose headers   'content-length': '5442',
+198 verbose headers   'accept-ranges': 'bytes',
+198 verbose headers   date: 'Fri, 29 Jan 2016 03:21:38 GMT',
+198 verbose headers   via: '1.1 varnish',
+198 verbose headers   age: '2',
+198 verbose headers   connection: 'keep-alive',
+198 verbose headers   'x-served-by': 'cache-hkg6821-HKG',
+198 verbose headers   'x-cache': 'HIT',
+198 verbose headers   'x-cache-hits': '1',
+198 verbose headers   'x-timer': 'S1454037698.426530,VS0,VE0',
+198 verbose headers   vary: 'Accept' }
+199 silly get cb [ 200,
+199 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+199 silly get     etag: '"5COR5F08LNF679JR9VE4E6VZW"',
+199 silly get     'content-type': 'application/json',
+199 silly get     'cache-control': 'max-age=300',
+199 silly get     'content-length': '5442',
+199 silly get     'accept-ranges': 'bytes',
+199 silly get     date: 'Fri, 29 Jan 2016 03:21:38 GMT',
+199 silly get     via: '1.1 varnish',
+199 silly get     age: '2',
+199 silly get     connection: 'keep-alive',
+199 silly get     'x-served-by': 'cache-hkg6821-HKG',
+199 silly get     'x-cache': 'HIT',
+199 silly get     'x-cache-hits': '1',
+199 silly get     'x-timer': 'S1454037698.426530,VS0,VE0',
+199 silly get     vary: 'Accept' } ]
+200 verbose get saving abbrev to /Users/juwaini/.npm/registry.npmjs.org/abbrev/.cache.json
+201 verbose correctMkdir /Users/juwaini/.npm correctMkdir not in flight; initializing
+202 silly resolveWithNewModule abbrev@1.0.7 checking installable status
+203 silly cache add args [ 'abbrev@1', null ]
+204 verbose cache add spec abbrev@1
+205 silly cache add parsed spec { raw: 'abbrev@1',
+205 silly cache add   scope: null,
+205 silly cache add   name: 'abbrev',
+205 silly cache add   rawSpec: '1',
+205 silly cache add   spec: '>=1.0.0 <2.0.0',
+205 silly cache add   type: 'range' }
+206 silly addNamed abbrev@>=1.0.0 <2.0.0
+207 verbose addNamed ">=1.0.0 <2.0.0" is a valid semver range for abbrev
+208 silly addNameRange { name: 'abbrev', range: '>=1.0.0 <2.0.0', hasData: false }
+209 silly mapToRegistry name abbrev
+210 silly mapToRegistry using default registry
+211 silly mapToRegistry registry https://registry.npmjs.org/
+212 silly mapToRegistry uri https://registry.npmjs.org/abbrev
+213 verbose addNameRange registry:https://registry.npmjs.org/abbrev not in flight; fetching
+214 verbose get https://registry.npmjs.org/abbrev not expired, no request
+215 silly addNameRange number 2 { name: 'abbrev', range: '>=1.0.0 <2.0.0', hasData: true }
+216 silly addNameRange versions [ 'abbrev', [ '1.0.3', '1.0.4', '1.0.5', '1.0.6', '1.0.7' ] ]
+217 silly addNamed abbrev@1.0.7
+218 verbose addNamed "1.0.7" is a plain semver version for abbrev
+219 silly cache afterAdd abbrev@1.0.7
+220 verbose afterAdd /Users/juwaini/.npm/abbrev/1.0.7/package/package.json not in flight; writing
+221 verbose correctMkdir /Users/juwaini/.npm correctMkdir not in flight; initializing
+222 verbose afterAdd /Users/juwaini/.npm/abbrev/1.0.7/package/package.json written
+223 silly fetchNamedPackageData shelljs
+224 silly mapToRegistry name shelljs
+225 silly mapToRegistry using default registry
+226 silly mapToRegistry registry https://registry.npmjs.org/
+227 silly mapToRegistry uri https://registry.npmjs.org/shelljs
+228 silly fetchNamedPackageData tail
+229 silly mapToRegistry name tail
+230 silly mapToRegistry using default registry
+231 silly mapToRegistry registry https://registry.npmjs.org/
+232 silly mapToRegistry uri https://registry.npmjs.org/tail
+233 verbose request uri https://registry.npmjs.org/tail
+234 verbose request no auth needed
+235 info attempt registry request try #1 at 11:21:39 AM
+236 http request GET https://registry.npmjs.org/tail
+237 verbose request uri https://registry.npmjs.org/shelljs
+238 verbose request no auth needed
+239 info attempt registry request try #1 at 11:21:39 AM
+240 verbose etag "7XKTOGBMB4W8L85KWZ1WQ9591"
+241 http request GET https://registry.npmjs.org/shelljs
+242 http 200 https://registry.npmjs.org/shelljs
+243 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+243 verbose headers   etag: '"9GSFSE9SNPIOFGXJW6JF18WN7"',
+243 verbose headers   'content-type': 'application/json',
+243 verbose headers   'cache-control': 'max-age=300',
+243 verbose headers   'content-length': '54244',
+243 verbose headers   'accept-ranges': 'bytes',
+243 verbose headers   date: 'Fri, 29 Jan 2016 03:21:38 GMT',
+243 verbose headers   via: '1.1 varnish',
+243 verbose headers   age: '69',
+243 verbose headers   connection: 'keep-alive',
+243 verbose headers   'x-served-by': 'cache-hkg6821-HKG',
+243 verbose headers   'x-cache': 'HIT',
+243 verbose headers   'x-cache-hits': '1',
+243 verbose headers   'x-timer': 'S1454037698.679335,VS0,VE0',
+243 verbose headers   vary: 'Accept' }
+244 silly get cb [ 200,
+244 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+244 silly get     etag: '"9GSFSE9SNPIOFGXJW6JF18WN7"',
+244 silly get     'content-type': 'application/json',
+244 silly get     'cache-control': 'max-age=300',
+244 silly get     'content-length': '54244',
+244 silly get     'accept-ranges': 'bytes',
+244 silly get     date: 'Fri, 29 Jan 2016 03:21:38 GMT',
+244 silly get     via: '1.1 varnish',
+244 silly get     age: '69',
+244 silly get     connection: 'keep-alive',
+244 silly get     'x-served-by': 'cache-hkg6821-HKG',
+244 silly get     'x-cache': 'HIT',
+244 silly get     'x-cache-hits': '1',
+244 silly get     'x-timer': 'S1454037698.679335,VS0,VE0',
+244 silly get     vary: 'Accept' } ]
+245 verbose get saving shelljs to /Users/juwaini/.npm/registry.npmjs.org/shelljs/.cache.json
+246 verbose correctMkdir /Users/juwaini/.npm correctMkdir not in flight; initializing
+247 silly resolveWithNewModule shelljs@0.2.6 checking installable status
+248 silly cache add args [ 'shelljs@^0.2.6', null ]
+249 verbose cache add spec shelljs@^0.2.6
+250 silly cache add parsed spec { raw: 'shelljs@^0.2.6',
+250 silly cache add   scope: null,
+250 silly cache add   name: 'shelljs',
+250 silly cache add   rawSpec: '^0.2.6',
+250 silly cache add   spec: '>=0.2.6 <0.3.0',
+250 silly cache add   type: 'range' }
+251 silly addNamed shelljs@>=0.2.6 <0.3.0
+252 verbose addNamed ">=0.2.6 <0.3.0" is a valid semver range for shelljs
+253 silly addNameRange { name: 'shelljs', range: '>=0.2.6 <0.3.0', hasData: false }
+254 silly mapToRegistry name shelljs
+255 silly mapToRegistry using default registry
+256 silly mapToRegistry registry https://registry.npmjs.org/
+257 silly mapToRegistry uri https://registry.npmjs.org/shelljs
+258 verbose addNameRange registry:https://registry.npmjs.org/shelljs not in flight; fetching
+259 verbose get https://registry.npmjs.org/shelljs not expired, no request
+260 silly addNameRange number 2 { name: 'shelljs', range: '>=0.2.6 <0.3.0', hasData: true }
+261 silly addNameRange versions [ 'shelljs',
+261 silly addNameRange   [ '0.0.1',
+261 silly addNameRange     '0.0.2',
+261 silly addNameRange     '0.0.3',
+261 silly addNameRange     '0.0.4',
+261 silly addNameRange     '0.0.5',
+261 silly addNameRange     '0.0.6',
+261 silly addNameRange     '0.0.7',
+261 silly addNameRange     '0.0.8',
+261 silly addNameRange     '0.0.9',
+261 silly addNameRange     '0.1.0',
+261 silly addNameRange     '0.1.1',
+261 silly addNameRange     '0.1.2',
+261 silly addNameRange     '0.1.3',
+261 silly addNameRange     '0.1.4',
+261 silly addNameRange     '0.2.0',
+261 silly addNameRange     '0.2.1',
+261 silly addNameRange     '0.2.2',
+261 silly addNameRange     '0.2.3',
+261 silly addNameRange     '0.2.4',
+261 silly addNameRange     '0.2.5',
+261 silly addNameRange     '0.2.6',
+261 silly addNameRange     '0.3.0',
+261 silly addNameRange     '0.4.0',
+261 silly addNameRange     '0.5.0',
+261 silly addNameRange     '0.5.1',
+261 silly addNameRange     '0.5.2',
+261 silly addNameRange     '0.5.3',
+261 silly addNameRange     '0.0.1-alpha1',
+261 silly addNameRange     '0.0.2-pre1',
+261 silly addNameRange     '0.0.4-pre1',
+261 silly addNameRange     '0.0.5-pre1',
+261 silly addNameRange     '0.0.5-pre2',
+261 silly addNameRange     '0.0.5-pre3',
+261 silly addNameRange     '0.0.5-pre4',
+261 silly addNameRange     '0.0.6-pre1',
+261 silly addNameRange     '0.0.6-pre2' ] ]
+262 silly addNamed shelljs@0.2.6
+263 verbose addNamed "0.2.6" is a plain semver version for shelljs
+264 silly cache afterAdd shelljs@0.2.6
+265 verbose afterAdd /Users/juwaini/.npm/shelljs/0.2.6/package/package.json not in flight; writing
+266 verbose correctMkdir /Users/juwaini/.npm correctMkdir not in flight; initializing
+267 verbose afterAdd /Users/juwaini/.npm/shelljs/0.2.6/package/package.json written
+268 http 200 https://registry.npmjs.org/tail
+269 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+269 verbose headers   etag: '"34U7TEQ2B54U5V2CGM8CGXQEQ"',
+269 verbose headers   'content-type': 'application/json',
+269 verbose headers   'cache-control': 'max-age=300',
+269 verbose headers   'content-length': '17244',
+269 verbose headers   'accept-ranges': 'bytes',
+269 verbose headers   date: 'Fri, 29 Jan 2016 03:21:38 GMT',
+269 verbose headers   via: '1.1 varnish',
+269 verbose headers   age: '0',
+269 verbose headers   connection: 'keep-alive',
+269 verbose headers   'x-served-by': 'cache-hkg6820-HKG',
+269 verbose headers   'x-cache': 'HIT',
+269 verbose headers   'x-cache-hits': '1',
+269 verbose headers   'x-timer': 'S1454037698.665541,VS0,VE174',
+269 verbose headers   vary: 'Accept' }
+270 silly get cb [ 200,
+270 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+270 silly get     etag: '"34U7TEQ2B54U5V2CGM8CGXQEQ"',
+270 silly get     'content-type': 'application/json',
+270 silly get     'cache-control': 'max-age=300',
+270 silly get     'content-length': '17244',
+270 silly get     'accept-ranges': 'bytes',
+270 silly get     date: 'Fri, 29 Jan 2016 03:21:38 GMT',
+270 silly get     via: '1.1 varnish',
+270 silly get     age: '0',
+270 silly get     connection: 'keep-alive',
+270 silly get     'x-served-by': 'cache-hkg6820-HKG',
+270 silly get     'x-cache': 'HIT',
+270 silly get     'x-cache-hits': '1',
+270 silly get     'x-timer': 'S1454037698.665541,VS0,VE174',
+270 silly get     vary: 'Accept' } ]
+271 verbose get saving tail to /Users/juwaini/.npm/registry.npmjs.org/tail/.cache.json
+272 verbose correctMkdir /Users/juwaini/.npm correctMkdir not in flight; initializing
+273 silly resolveWithNewModule tail@0.4.0 checking installable status
+274 silly cache add args [ 'tail@^0.4.0', null ]
+275 verbose cache add spec tail@^0.4.0
+276 silly cache add parsed spec { raw: 'tail@^0.4.0',
+276 silly cache add   scope: null,
+276 silly cache add   name: 'tail',
+276 silly cache add   rawSpec: '^0.4.0',
+276 silly cache add   spec: '>=0.4.0 <0.5.0',
+276 silly cache add   type: 'range' }
+277 silly addNamed tail@>=0.4.0 <0.5.0
+278 verbose addNamed ">=0.4.0 <0.5.0" is a valid semver range for tail
+279 silly addNameRange { name: 'tail', range: '>=0.4.0 <0.5.0', hasData: false }
+280 silly mapToRegistry name tail
+281 silly mapToRegistry using default registry
+282 silly mapToRegistry registry https://registry.npmjs.org/
+283 silly mapToRegistry uri https://registry.npmjs.org/tail
+284 verbose addNameRange registry:https://registry.npmjs.org/tail not in flight; fetching
+285 verbose get https://registry.npmjs.org/tail not expired, no request
+286 silly addNameRange number 2 { name: 'tail', range: '>=0.4.0 <0.5.0', hasData: true }
+287 silly addNameRange versions [ 'tail',
+287 silly addNameRange   [ '0.0.3',
+287 silly addNameRange     '0.0.4',
+287 silly addNameRange     '0.1.0',
+287 silly addNameRange     '0.1.1',
+287 silly addNameRange     '0.1.2',
+287 silly addNameRange     '0.2.0',
+287 silly addNameRange     '0.2.1',
+287 silly addNameRange     '0.2.2',
+287 silly addNameRange     '0.2.3',
+287 silly addNameRange     '0.2.4',
+287 silly addNameRange     '0.3.0',
+287 silly addNameRange     '0.3.1',
+287 silly addNameRange     '0.3.2',
+287 silly addNameRange     '0.3.5',
+287 silly addNameRange     '0.3.6',
+287 silly addNameRange     '0.3.7',
+287 silly addNameRange     '0.3.8',
+287 silly addNameRange     '0.3.9',
+287 silly addNameRange     '0.4.0' ] ]
+288 silly addNamed tail@0.4.0
+289 verbose addNamed "0.4.0" is a plain semver version for tail
+290 silly mapToRegistry name tail
+291 silly mapToRegistry using default registry
+292 silly mapToRegistry registry https://registry.npmjs.org/
+293 silly mapToRegistry uri https://registry.npmjs.org/tail
+294 verbose addRemoteTarball https://registry.npmjs.org/tail/-/tail-0.4.0.tgz not in flight; adding
+295 verbose addRemoteTarball [ 'https://registry.npmjs.org/tail/-/tail-0.4.0.tgz',
+295 verbose addRemoteTarball   'd29de72750cc99db1e053aff13c359ecfb713002' ]
+296 info retry fetch attempt 1 at 11:21:40 AM
+297 info attempt registry request try #1 at 11:21:40 AM
+298 http fetch GET https://registry.npmjs.org/tail/-/tail-0.4.0.tgz
+299 http fetch 200 https://registry.npmjs.org/tail/-/tail-0.4.0.tgz
+300 silly fetchAndShaCheck shasum d29de72750cc99db1e053aff13c359ecfb713002
+301 verbose addTmpTarball /var/folders/wp/q_4wp9_53dv4m7qd4vlknp8r0000gn/T/npm-6633-56ab22eb/registry.npmjs.org/tail/-/tail-0.4.0.tgz not in flight; adding
+302 verbose addTmpTarball already have metadata; skipping unpack for tail@0.4.0
+303 verbose correctMkdir /Users/juwaini/.npm correctMkdir not in flight; initializing
+304 silly cache afterAdd tail@0.4.0
+305 verbose afterAdd /Users/juwaini/.npm/tail/0.4.0/package/package.json not in flight; writing
+306 verbose correctMkdir /Users/juwaini/.npm correctMkdir not in flight; initializing
+307 verbose afterAdd /Users/juwaini/.npm/tail/0.4.0/package/package.json written
+308 silly loadAllDepsIntoIdealTree Finishing
+309 silly idealTree:prePrune lib
+309 silly idealTree:prePrune └─┬ ios-sim@5.0.6
+309 silly idealTree:prePrune   ├── abbrev@1.0.7
+309 silly idealTree:prePrune   ├── bplist-parser@0.0.6
+309 silly idealTree:prePrune   ├── nopt@1.0.9
+309 silly idealTree:prePrune   ├── shelljs@0.2.6
+309 silly idealTree:prePrune   ├── simctl@0.0.8
+309 silly idealTree:prePrune   └── tail@0.4.0
+310 silly loadIdealTree Finishing
+311 silly currentTree lib
+312 silly idealTree lib
+312 silly idealTree └─┬ ios-sim@5.0.6
+312 silly idealTree   ├── abbrev@1.0.7
+312 silly idealTree   ├── bplist-parser@0.0.6
+312 silly idealTree   ├── nopt@1.0.9
+312 silly idealTree   ├── shelljs@0.2.6
+312 silly idealTree   ├── simctl@0.0.8
+312 silly idealTree   └── tail@0.4.0
+313 silly generateActionsToTake Starting
+314 silly install generateActionsToTake
+315 silly generateActionsToTake Finishing
+316 silly diffTrees action count 7
+317 silly diffTrees add abbrev@1.0.7
+318 silly diffTrees add bplist-parser@0.0.6
+319 silly diffTrees add nopt@1.0.9
+320 silly diffTrees add shelljs@0.2.6
+321 silly diffTrees add tail@0.4.0
+322 silly diffTrees add simctl@0.0.8
+323 silly diffTrees add ios-sim@5.0.6
+324 silly decomposeActions action count 56
+325 silly decomposeActions fetch abbrev@1.0.7
+326 silly decomposeActions extract abbrev@1.0.7
+327 silly decomposeActions test abbrev@1.0.7
+328 silly decomposeActions preinstall abbrev@1.0.7
+329 silly decomposeActions build abbrev@1.0.7
+330 silly decomposeActions install abbrev@1.0.7
+331 silly decomposeActions postinstall abbrev@1.0.7
+332 silly decomposeActions finalize abbrev@1.0.7
+333 silly decomposeActions fetch bplist-parser@0.0.6
+334 silly decomposeActions extract bplist-parser@0.0.6
+335 silly decomposeActions test bplist-parser@0.0.6
+336 silly decomposeActions preinstall bplist-parser@0.0.6
+337 silly decomposeActions build bplist-parser@0.0.6
+338 silly decomposeActions install bplist-parser@0.0.6
+339 silly decomposeActions postinstall bplist-parser@0.0.6
+340 silly decomposeActions finalize bplist-parser@0.0.6
+341 silly decomposeActions fetch nopt@1.0.9
+342 silly decomposeActions extract nopt@1.0.9
+343 silly decomposeActions test nopt@1.0.9
+344 silly decomposeActions preinstall nopt@1.0.9
+345 silly decomposeActions build nopt@1.0.9
+346 silly decomposeActions install nopt@1.0.9
+347 silly decomposeActions postinstall nopt@1.0.9
+348 silly decomposeActions finalize nopt@1.0.9
+349 silly decomposeActions fetch shelljs@0.2.6
+350 silly decomposeActions extract shelljs@0.2.6
+351 silly decomposeActions test shelljs@0.2.6
+352 silly decomposeActions preinstall shelljs@0.2.6
+353 silly decomposeActions build shelljs@0.2.6
+354 silly decomposeActions install shelljs@0.2.6
+355 silly decomposeActions postinstall shelljs@0.2.6
+356 silly decomposeActions finalize shelljs@0.2.6
+357 silly decomposeActions fetch tail@0.4.0
+358 silly decomposeActions extract tail@0.4.0
+359 silly decomposeActions test tail@0.4.0
+360 silly decomposeActions preinstall tail@0.4.0
+361 silly decomposeActions build tail@0.4.0
+362 silly decomposeActions install tail@0.4.0
+363 silly decomposeActions postinstall tail@0.4.0
+364 silly decomposeActions finalize tail@0.4.0
+365 silly decomposeActions fetch simctl@0.0.8
+366 silly decomposeActions extract simctl@0.0.8
+367 silly decomposeActions test simctl@0.0.8
+368 silly decomposeActions preinstall simctl@0.0.8
+369 silly decomposeActions build simctl@0.0.8
+370 silly decomposeActions install simctl@0.0.8
+371 silly decomposeActions postinstall simctl@0.0.8
+372 silly decomposeActions finalize simctl@0.0.8
+373 silly decomposeActions fetch ios-sim@5.0.6
+374 silly decomposeActions extract ios-sim@5.0.6
+375 silly decomposeActions test ios-sim@5.0.6
+376 silly decomposeActions preinstall ios-sim@5.0.6
+377 silly decomposeActions build ios-sim@5.0.6
+378 silly decomposeActions install ios-sim@5.0.6
+379 silly decomposeActions postinstall ios-sim@5.0.6
+380 silly decomposeActions finalize ios-sim@5.0.6
+381 silly executeActions Starting
+382 silly install executeActions
+383 silly doSerial global-install 0
+384 silly doParallel fetch 7
+385 verbose correctMkdir /Users/juwaini/.npm/_locks correctMkdir not in flight; initializing
+386 warn locking Error: EACCES, open '/Users/juwaini/.npm/_locks/staging-3a08f0df5026584d.lock'
+386 warn locking     at Error (native)
+386 warn locking  /Users/juwaini/.npm/_locks/staging-3a08f0df5026584d.lock failed { [Error: EACCES, open '/Users/juwaini/.npm/_locks/staging-3a08f0df5026584d.lock']
+386 warn locking   errno: -13,
+386 warn locking   code: 'EACCES',
+386 warn locking   path: '/Users/juwaini/.npm/_locks/staging-3a08f0df5026584d.lock' }
+387 silly rollbackFailedOptional Starting
+388 silly rollbackFailedOptional Finishing
+389 silly runTopLevelLifecycles Starting
+390 silly runTopLevelLifecycles Finishing
+391 silly install printInstalled
+392 verbose stack Error: EACCES, open '/Users/juwaini/.npm/_locks/staging-3a08f0df5026584d.lock'
+392 verbose stack     at Error (native)
+393 verbose cwd /Users/juwaini/epireg
+394 error Darwin 15.2.0
+395 error argv "node" "/usr/local/bin/npm" "install" "-g" "ios-sim"
+396 error node v0.12.7
+397 error npm  v3.6.0
+398 error path /Users/juwaini/.npm/_locks/staging-3a08f0df5026584d.lock
+399 error code EACCES
+400 error errno -13
+401 error Error: EACCES, open '/Users/juwaini/.npm/_locks/staging-3a08f0df5026584d.lock'
+401 error     at Error (native)
+401 error  { [Error: EACCES, open '/Users/juwaini/.npm/_locks/staging-3a08f0df5026584d.lock']
+401 error   errno: -13,
+401 error   code: 'EACCES',
+401 error   path: '/Users/juwaini/.npm/_locks/staging-3a08f0df5026584d.lock' }
+402 error Please try running this command again as root/Administrator.
+403 verbose exit [ -13, true ]

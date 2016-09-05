@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+
+    <!-- compiled css output -->
+    <link href="css/ionic.app.css" rel="stylesheet">
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ionic/js/angular/angular-resource.min.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+</head>
+
+<body ng-app="epireg" ng-controller="EpiregCtrl">
+
+<ion-pane>
+    <ion-header-bar align-title="center" class="bar bar-header bar-positive">
+        <h1 class="title">Epilepsy Registry</h1>
+    </ion-header-bar>
+
+    <ion-content padding="true" delegate-handle="mainScroll">
+        <form name="epilepsyRegistyForm" novalidate="">
+
+            <div class="list">
+
+                <!--label class="item">
+                </label-->
+
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Name</span>
+                    <input ng-model="epiregForm.name" type="text" placeholder="{{hint.name}}">
+                </label>
+
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">RN</span>
+                    <input ng-model="epiregForm.rn" type="text" placeholder="{{hint.rn}}">
+                </label>
+
+                <label class="item item-input item-select">
+                    <div class="input-label">Sex</div>
+                    <select ng-model="epiregForm.sex" ng-options="sex.key as sex.value for sex in gender">
+                        <option value="">{{hint.sex}}</option>
+                    </select>
+                </label>
+
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Race</span>
+                    <input ng-model="epiregForm.race" type="text" placeholder="{{hint.race}}">
+                </label>
+
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Age Onset</span>
+                    <input ng-model="epiregForm.age_onset" type="number" placeholder="{{hint.age_onset}}">
+                </label>
+
+
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Year Of Birth</span>
+                    <input ng-model="epiregForm.year_of_birth" type="number" placeholder="{{hint.year_of_birth}}">
+                </label>
+
+
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Ictal Phenomenon</span>
+                    <input ng-model="epiregForm.ictal_phenomenon" type="text" placeholder="{{hint.ictal_phenomenon}}">
+                </label>
+
+                <label class="item item-input item-select">
+                    <div class="input-label">Seizure Type</div>
+                    <select ng-model="epiregForm.seizure_type" ng-options="type.key as type.value for type in seizure_type">
+                        <option value="">{{hint.seizure_type}}</option>
+                    </select>
+                </label>
+
+                <label class="item item-input item-select">
+                    <div class="input-label">Aetiology/Syndrome</div>
+                    <select ng-model="epiregForm.aetiology_syndrome" ng-options="cause.key as cause.value for cause in aetiology_syndrome">
+                        <option value="">{{hint.aetiology_syndrome}}</option>
+                    </select>
+                </label>
+
+                <label class="item item-input item-select">
+                    <div class="input-label">Comorbidity/Perinatal</div>
+                    <select ng-model="epiregForm.comorbidity_perinatal" ng-options="opt.key as opt.value for opt in yes_no_unknown">
+                        <option value="">{{hint.comorbidity_perinatal}}</option>
+                    </select>
+                </label>
+
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Febrile Seizure</span>
+                    <input ng-model="epiregForm.febrile_seizure" type="text" placeholder="{{hint.febrile_seizure}}">
+                </label>
+
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Family History</span>
+                    <input ng-model="epiregForm.family_history" type="text" placeholder="{{hint.family_history}}">
+                </label>
+
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">EEG</span>
+                    <input ng-model="epiregForm.eeg" type="text" placeholder="{{hint.eeg}}">
+                </label>
+
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">MRI</span>
+                    <input ng-model="epiregForm.mri" type="text" placeholder="{{hint.mri}}">
+                </label>
+
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Other Investigations</span>
+                    <input ng-model="epiregForm.other_investigations" type="text" placeholder="{{hint.other_investigations}}">
+                </label>
+
+                <label class="item item-input">
+                    <span class="input-label">Last Seen</span>
+                    <input ng-model="epiregForm.last_seen" type="date">
+                </label>
+
+                <div class="card">
+                    <div class="item item-divider">
+                        Current Anti-Epileptic Drug 1
+                    </div>
+                    <label class="item item-input item-select">
+                        <div class="input-label">Type</div>
+                        <select ng-model="epiregForm.current_aed1.type" ng-options="aed.key as aed.value for aed in anti_epileptic_drug">
+                            <option value="">{{hint.current_aed1.type}}</option>
+                        </select>
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Dose (in ml)</span>
+                        <input ng-model="epiregForm.current_aed1.dose" type="number" placeholder="{{hint.current_aed1.dose}}">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Efficacy/Side Effects</span>
+                        <input ng-model="epiregForm.current_aed1.efficacy_side_effects" type="text" placeholder="{{hint.current_aed1.efficacy_side_effects}}">
+                    </label>
+                </div>
+
+                <div class="card">
+                    <div class="item item-divider">
+                        Current Anti-Epileptic Drug 2
+                    </div>
+                    <label class="item item-input item-select">
+                        <div class="input-label">Type</div>
+                        <select ng-model="epiregForm.current_aed2.type" ng-options="aed.key as aed.value for aed in anti_epileptic_drug">
+                            <option value="">{{hint.current_aed2.type}}</option>
+                        </select>
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Dose (in ml)</span>
+                        <input ng-model="epiregForm.current_aed2.dose" type="number" placeholder="{{hint.current_aed2.dose}}">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Efficacy/Side Effects</span>
+                        <input ng-model="epiregForm.current_aed2.efficacy_side_effects" type="text" placeholder="{{hint.current_aed2.efficacy_side_effects}}">
+                    </label>
+                </div>
+
+                <div class="card">
+                    <div class="item item-divider">
+                        Current Anti-Epileptic Drug 3
+                    </div>
+                    <label class="item item-input item-select">
+                        <div class="input-label">Type</div>
+                        <select ng-model="epiregForm.current_aed3.type" ng-options="aed.key as aed.value for aed in anti_epileptic_drug">
+                            <option value="">{{hint.current_aed3.type}}</option>
+                        </select>
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Dose (in ml)</span>
+                        <input ng-model="epiregForm.current_aed3.dose" type="number" placeholder="{{hint.current_aed3.dose}}">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Efficacy/Side Effects</span>
+                        <input ng-model="epiregForm.current_aed3.efficacy_side_effects" type="text" placeholder="{{hint.current_aed3.efficacy_side_effects}}">
+                    </label>
+                </div>
+
+                <div class="card">
+                    <div class="item item-divider">
+                        Current Anti-Epileptic Drug 4
+                    </div>
+                    <label class="item item-input item-select">
+                        <div class="input-label">Type</div>
+                        <select ng-model="epiregForm.current_aed4.type" ng-options="aed.key as aed.value for aed in anti_epileptic_drug">
+                            <option value="">{{hint.current_aed4.type}}</option>
+                        </select>
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Dose (in ml)</span>
+                        <input ng-model="epiregForm.current_aed4.dose" type="number" placeholder="{{hint.current_aed4.dose}}">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Efficacy/Side Effects</span>
+                        <input ng-model="epiregForm.current_aed4.efficacy_side_effects" type="text" placeholder="{{hint.current_aed4.efficacy_side_effects}}">
+                    </label>
+                </div>
+
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Seizure Control</span>
+                    <input ng-model="epiregForm.seizure_control" type="text" placeholder="{{hint.seizure_control}}">
+                </label>
+
+                <div class="card">
+                    <div class="item item-divider">
+                        Previous Anti-Epileptic Drug 1
+                    </div>
+                    <label class="item item-input item-select">
+                        <div class="input-label">Type</div>
+                        <select ng-model="epiregForm.previous_aed1.type" ng-options="aed.key as aed.value for aed in anti_epileptic_drug">
+                            <option value="">{{hint.previous_aed1.type}}</option>
+                        </select>
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Dose (in ml)</span>
+                        <input ng-model="epiregForm.previous_aed1.dose" type="number" placeholder="{{hint.previous_aed1.dose}}">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Reason</span>
+                        <input ng-model="epiregForm.previous_aed1.reason" type="text" placeholder="{{hint.previous_aed1.reason}}">
+                    </label>
+                </div>
+
+                <div class="card">
+                    <div class="item item-divider">
+                        Previous Anti-Epileptic Drug 2
+                    </div>
+                    <label class="item item-input item-select">
+                        <div class="input-label">Type</div>
+                        <select ng-model="epiregForm.previous_aed2.type" ng-options="aed.key as aed.value for aed in anti_epileptic_drug">
+                            <option value="">{{hint.previous_aed2.type}}</option>
+                        </select>
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Dose (in ml)</span>
+                        <input ng-model="epiregForm.previous_aed2.dose" type="number" placeholder="{{hint.previous_aed2.dose}}">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Reason</span>
+                        <input ng-model="epiregForm.previous_aed2.reason" type="text" placeholder="{{hint.previous_aed2.reason}}">
+                    </label>
+                </div>
+
+                <div class="card">
+                    <div class="item item-divider">
+                        Previous Anti-Epileptic Drug 3
+                    </div>
+                    <label class="item item-input item-select">
+                        <div class="input-label">Type</div>
+                        <select ng-model="epiregForm.previous_aed3.type" ng-options="aed.key as aed.value for aed in anti_epileptic_drug">
+                            <option value="">{{hint.previous_aed3.type}}</option>
+                        </select>
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Dose (in ml)</span>
+                        <input ng-model="epiregForm.previous_aed3.dose" type="number" placeholder="{{hint.previous_aed3.dose}}">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Reason</span>
+                        <input ng-model="epiregForm.previous_aed3.reason" type="text" placeholder="{{hint.previous_aed3.reason}}">
+                    </label>
+                </div>
+
+                <div class="card">
+                    <div class="item item-divider">
+                        Previous Anti-Epileptic Drug 4
+                    </div>
+                    <label class="item item-input item-select">
+                        <div class="input-label">Type</div>
+                        <select ng-model="epiregForm.previous_aed4.type" ng-options="aed.key as aed.value for aed in anti_epileptic_drug">
+                            <option value="">{{hint.previous_aed4.type}}</option>
+                        </select>
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Dose (in ml)</span>
+                        <input ng-model="epiregForm.previous_aed4.dose" type="number" placeholder="{{hint.previous_aed4.dose}}">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Reason</span>
+                        <input ng-model="epiregForm.previous_aed4.reason" type="text" placeholder="{{hint.previous_aed4.reason}}">
+                    </label>
+                </div>
+
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Remarks</span>
+                    <input ng-model="epiregForm.remarks" type="text" placeholder="{{hint.remarks}}">
+                </label>
+                <!--li class="item item-checkbox item-floating-label">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                    </label>
+                    Flux Capacitor
+                </li-->
+
+                <div class="row">
+                    <div class="col">
+                        <button ng-click="formSubmit()" class="button button-block button-calm">
+                            Submit
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button ng-click="formReset()" class="button button-block button-calm">
+                            Reset
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </form>
+    </ion-content>
+
+    <!--ion-footer-bar align-title="center" class="bar bar-footer bar-assertive">
+        <h1 class="title">Connected...</h1>
+    </ion-footer-bar-->
+</ion-pane>
+
+</body>
+
+</html>
